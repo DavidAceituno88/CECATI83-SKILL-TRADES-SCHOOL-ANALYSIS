@@ -1,6 +1,6 @@
 /****** Depuración de Base de Datos principal CECATI  ******/
 SELECT [ciclo_ins] AS Period
-      ,[fecha_ini] Start_Date
+      ,[fecha_ini] date
       ,[per_egre]
       ,[docente] AS Teacher
       ,[nom_est] AS State
