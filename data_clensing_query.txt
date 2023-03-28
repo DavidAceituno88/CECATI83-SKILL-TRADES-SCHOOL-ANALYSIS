@@ -1,35 +1,35 @@
 /****** Depuración de Base de Datos principal CECATI  ******/
-SELECT [ciclo_ins]
-      ,[fecha_ini]
+SELECT [ciclo_ins] AS Period
+      ,[fecha_ini] Start_Date
       ,[per_egre]
-      ,[docente] AS Docente
-      ,[nom_est] AS Estado
-	  ,CONCAT(nombre,' ',a_paterno,' ',a_materno) AS Nombre_Estudiante
-      ,[colonia] AS Colonia
-      ,[muni_deleg] AS Municipio
-      ,[cp] 
-      ,[sexo] AS Sexo
-      ,[edad] AS Edad
-      ,[e_civil] AS Estado_Civil
-      ,[telefono] AS Telefono
+      ,[docente] AS Teacher
+      ,[nom_est] AS State
+	  ,CONCAT(nombre,' ',a_paterno,' ',a_materno) AS Student_Name
+      ,[colonia] AS Street
+      ,[muni_deleg] AS City
+      ,[cp] AS Postal Code
+      ,[sexo] AS Gender
+      ,[edad] AS Age
+      ,[e_civil] AS Civil_Status
+      ,[telefono] AS Phone
       ,[email] 
-      ,[f_ingreso] AS Fecha_Ingreso
-      ,[escolarida] AS Escolaridad
-      ,[pais] AS Pais
-      ,[nom_cur] AS Curso
-      ,[tipo_med] AS Medio
-      ,[tipo_mot] AS Motivo
-      ,[trabaja_si]
+      ,[f_ingreso] AS Start_Date
+      ,[escolarida] AS Scolarship
+      ,[pais] AS Country
+      ,[nom_cur] AS Course
+      ,[tipo_med] AS Means
+      ,[tipo_mot] AS Motive
+      ,[trabaja_si] 
       ,[trabaja_no]
-	  ,CASE WHEN trabaja_si = 1 THEN 'SI'
+	  ,CASE WHEN trabaja_si = 1 THEN 'YES'
 	  WHEN trabaja_no = 1 THEN 'NO'
 	  ELSE 'NO'
-	  END  AS Trabaja
-      ,[ingresos_m] AS Ingresos_Mensuales
-      ,[f_inscrip] AS Fecha_Inscripcion
+	  END  AS HAS_A_JOB
+      ,[ingresos_m] AS Monthly_Incom
+      ,[f_inscrip] AS Registration_Date
       ,[nom_area] AS Area
-      ,[nom_esp] AS Especialidad
-      ,[escol] AS Escolaridad
-      ,[turno] AS Turno
+      ,[nom_esp] AS Specialty
+      ,[escol] 
+      ,[turno] AS Shift
   FROM [olympic_games].[dbo].[CECATI_FULL]
   ORDER BY f_ingreso;
